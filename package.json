@@ -1,0 +1,37 @@
+{
+  "name": "bankkata",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run clean && babel -d ./build ./server -s ",
+    "clean-w": "del build",
+    "clean": "rm -rf build",
+    "dev": "nodemon --exec babel-node ./server/index.js",
+    "start": "npm run build && node ./build/index.js ",
+    "test": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "@babel/node": "^7.8.7",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/register": "^7.10.5",
+    "@babel/runtime": "^7.12.5",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.12.1",
+    "helmet": "^4.6.0",
+    "moment": "^2.29.1",
+    "mongoose": "^5.13.7",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.12",
+    "uuid": "^8.3.2"
+  }
+}
