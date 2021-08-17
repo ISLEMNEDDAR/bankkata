@@ -51,7 +51,7 @@ const withdraw = async (bankAccount, amount) => {
         accountid: bankAccount.id,
         label: typeTransaction.withdraw,
         amount,
-        balance :  bankAccount.balance
+        balance :  bankAccount.facilitecaiseSpended > 0 ? -1*bankAccount.facilitecaiseSpended : bankAccount.balance
     })
     await transaction.save()
     await bankAccount.save()
